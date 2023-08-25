@@ -140,7 +140,7 @@ def conditional_download(download_directory_path: str, urls: List[str]) -> None:
         download_file_path = os.path.join(download_directory_path, os.path.basename(url))
         if not os.path.exists(download_file_path):
             req = urllib.request.Request(url)
-            req.add_header('Authorization', 'Bearer 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')
+            req.add_header('Authorization', 'Bearer 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')
             request = urllib.request.urlopen(req)  # type: ignore[attr-defined]
             total = int(request.headers.get('Content-Length', 0))
             with tqdm(total=total, desc='Downloading', unit='B', unit_scale=True, unit_divisor=1024) as progress:
